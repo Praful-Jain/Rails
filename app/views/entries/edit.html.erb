@@ -1,0 +1,17 @@
+<% content_for :title do %>
+  Edit Entry &ndash; <%= DateTime.now.to_formatted_s(:nice_date) %>
+<% end %>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <%= render "form", entry: @entry %>
+      <div class="d-flex justify-content-center ">
+        <%= link_to "Show this entry", @entry, class: "btn btn-secondary btn-sm m-1" %>
+        <%= link_to "Back to entries", entries_path, class: "btn btn-secondary btn-sm m-1" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
